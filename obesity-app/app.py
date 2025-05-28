@@ -1,6 +1,11 @@
 import streamlit as st
 import joblib
 import pandas as pd
+import joblib
+import os
+
+model_path = os.path.join(os.path.dirname(__file__), 'obesity_pipeline.pkl')
+model = joblib.load(model_path)
 
 # Load pipeline
 model = joblib.load('obesity_pipeline.pkl')
